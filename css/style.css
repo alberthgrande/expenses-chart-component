@@ -96,6 +96,10 @@ main {
   position: relative;
 }
 
+.mon__chart-color:hover {
+  background-color: hsl(10, 79%, 65%, 0.8);
+}
+
 .mon__chart-color::before,
 .mon__chart-color::after {
   --scale: 0;
@@ -130,6 +134,10 @@ main {
   border-radius: 3px;
   margin: 1rem 0;
   position: relative;
+}
+
+.tue__chart-color:hover {
+  background-color: hsl(10, 79%, 65%, 0.8);
 }
 
 .tue__chart-color::before,
@@ -326,6 +334,10 @@ main {
   border-radius: 3px;
   margin: 1rem 0;
   position: relative;
+}
+
+.sun__chart-color:hover {
+  background-color: hsl(10, 79%, 65%, 0.8);
 }
 
 .sun__chart-color::before,
