@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: var(--clr-neutral-Very-pale-orange);
+  background-color: var(--clr-neutral-Cream);
   font-family: var(--ff-font-family);
 }
 
@@ -44,7 +44,7 @@ main {
 }
 
 .expenses__charts {
-  background-color: var(--clr-neutral-Cream);
+  background-color: var(--clr-neutral-Very-pale-orange);
   border-radius: 1rem;
   margin: 1rem 0;
   padding: 1.1rem;
@@ -76,62 +76,131 @@ main {
 .expenses__charts-rating {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   color: var(--clr-neutral-Medium-brown);
   text-align: center;
 }
 
-/* chars color rating */
+/* charts color rating */
+.charts {
+  cursor: pointer;
+}
+
 .mon__chart-color {
-  height: 100px;
-  width: 2.5rem;
+  height: 65px;
+  width: 3rem;
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
 }
 
 .tue__chart-color {
-  height: 100px;
-  width: 2.5rem;
+  height: 135px;
+  width: 3rem;
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
 }
 
 .wed__chart-color {
-  height: 150px;
-  width: 2.5rem;
+  height: 200px;
+  width: 3rem;
   background-color: var(--clr-primary-Cyan);
   border-radius: 3px;
   margin: 1rem 0;
+  position: relative;
+}
+
+.wed__chart-color:hover {
+  background-color: hsl(186, 34%, 60%, 0.8);
+}
+
+.wed__chart-color::before,
+.wed__chart-color::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.wed__chart-color::before {
+  content: attr(data-tooltip);
+  color: var(--clr-neutral-Very-pale-orange);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--clr-neutral-Dark-brown);
+}
+
+.wed__chart-color:hover::before {
+  --scale: 1;
 }
 
 .thu__chart-color {
-  height: 100px;
-  width: 2.5rem;
+  height: 122px;
+  width: 3rem;
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
+  position: relative;
+}
+
+.thu__chart-color:hover {
+  background-color: hsl(10, 79%, 65%, 0.8);
+}
+
+.thu__chart-color::before,
+.thu__chart-color::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.thu__chart-color::before {
+  content: attr(data-tooltip);
+  color: var(--clr-neutral-Very-pale-orange);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--clr-neutral-Dark-brown);
+}
+
+.thu__chart-color:hover::before {
+  --scale: 1;
 }
 
 .fri__chart-color {
-  height: 100px;
-  width: 2.5rem;
+  height: 95px;
+  width: 3rem;
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
 }
 
 .sat__chart-color {
-  height: 100px;
-  width: 2.5rem;
+  height: 165px;
+  width: 3rem;
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
 }
 
 .sun__chart-color {
-  height: 100px;
-  width: 2.5rem;
+  height: 105px;
+  width: 3rem;
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
@@ -139,8 +208,7 @@ main {
 
 hr {
   display: block;
-  outline: 1px solid var(--clr-neutral-Cream);
-  border: 1px solid var(--clr-neutral-Very-pale-orange);
+  border: 1px solid var(--clr-neutral-Cream);
 }
 
 @media only screen and (min-width: 37.5rem) {
@@ -158,56 +226,58 @@ hr {
 
   /* chars color rating */
   .mon__chart-color {
-    height: 100px;
-    width: 2rem;
+    height: 65px;
+    width: 2.165rem;
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
   }
 
   .tue__chart-color {
-    height: 100px;
-    width: 2rem;
+    height: 135px;
+    width: 2.165rem;
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
   }
 
   .wed__chart-color {
-    height: 150px;
-    width: 2rem;
+    height: 200px;
+    width: 2.165rem;
     background-color: var(--clr-primary-Cyan);
     border-radius: 3px;
     margin: 1rem 0;
+    font-size: 11px;
   }
 
   .thu__chart-color {
-    height: 100px;
-    width: 2rem;
+    height: 122px;
+    width: 2.165rem;
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
+    font-size: 11px;
   }
 
   .fri__chart-color {
-    height: 100px;
-    width: 2rem;
+    height: 95px;
+    width: 2.165rem;
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
   }
 
   .sat__chart-color {
-    height: 100px;
-    width: 2rem;
+    height: 165px;
+    width: 2.165rem;
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
   }
 
   .sun__chart-color {
-    height: 100px;
-    width: 2rem;
+    height: 105px;
+    width: 2.165rem;
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
