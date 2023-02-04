@@ -82,6 +82,7 @@ main {
 }
 
 /* charts color rating */
+
 .charts {
   cursor: pointer;
 }
@@ -92,6 +93,34 @@ main {
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
+  position: relative;
+}
+
+.mon__chart-color::before,
+.mon__chart-color::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.mon__chart-color::before {
+  content: attr(data-tooltip);
+  color: var(--clr-neutral-Very-pale-orange);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--clr-neutral-Dark-brown);
+}
+
+.mon__chart-color:hover::before {
+  --scale: 1;
 }
 
 .tue__chart-color {
@@ -100,6 +129,34 @@ main {
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
+  position: relative;
+}
+
+.tue__chart-color::before,
+.tue__chart-color::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.tue__chart-color::before {
+  content: attr(data-tooltip);
+  color: var(--clr-neutral-Very-pale-orange);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--clr-neutral-Dark-brown);
+}
+
+.tue__chart-color:hover::before {
+  --scale: 1;
 }
 
 .wed__chart-color {
@@ -188,6 +245,38 @@ main {
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
+  position: relative;
+}
+
+.fri__chart-color:hover {
+  background-color: hsl(10, 79%, 65%, 0.8);
+}
+
+.fri__chart-color::before,
+.fri__chart-color::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.fri__chart-color::before {
+  content: attr(data-tooltip);
+  color: var(--clr-neutral-Very-pale-orange);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--clr-neutral-Dark-brown);
+}
+
+.fri__chart-color:hover::before {
+  --scale: 1;
 }
 
 .sat__chart-color {
@@ -196,6 +285,38 @@ main {
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
+  position: relative;
+}
+
+.sat__chart-color:hover {
+  background-color: hsl(10, 79%, 65%, 0.8);
+}
+
+.sat__chart-color::before,
+.sat__chart-color::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.sat__chart-color::before {
+  content: attr(data-tooltip);
+  color: var(--clr-neutral-Very-pale-orange);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--clr-neutral-Dark-brown);
+}
+
+.sat__chart-color:hover::before {
+  --scale: 1;
 }
 
 .sun__chart-color {
@@ -204,6 +325,34 @@ main {
   background-color: var(--clr-primary-Soft-red);
   border-radius: 3px;
   margin: 1rem 0;
+  position: relative;
+}
+
+.sun__chart-color::before,
+.sun__chart-color::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.sun__chart-color::before {
+  content: attr(data-tooltip);
+  color: var(--clr-neutral-Very-pale-orange);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--clr-neutral-Dark-brown);
+}
+
+.sun__chart-color:hover::before {
+  --scale: 1;
 }
 
 hr {
@@ -231,6 +380,7 @@ hr {
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
+    font-size: 11px;
   }
 
   .tue__chart-color {
@@ -239,6 +389,7 @@ hr {
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
+    font-size: 11px;
   }
 
   .wed__chart-color {
@@ -265,6 +416,7 @@ hr {
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
+    font-size: 11px;
   }
 
   .sat__chart-color {
@@ -273,6 +425,7 @@ hr {
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
+    font-size: 11px;
   }
 
   .sun__chart-color {
@@ -281,6 +434,7 @@ hr {
     background-color: var(--clr-primary-Soft-red);
     border-radius: 3px;
     margin: 1rem 0;
+    font-size: 11px;
   }
 }
 
